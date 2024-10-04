@@ -10,12 +10,4 @@ spring:
     hibernate:
       ddl-auto: create
     database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect  
-  cloud:
-    config:
-      override-system-properties: false
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://discovery:8761/eureka
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
