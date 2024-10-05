@@ -1,0 +1,3 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://associations_db:5433/associations
