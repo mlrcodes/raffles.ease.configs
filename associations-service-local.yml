@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://associations-db:5432/associations
+    url: jdbc:postgresql://localhost:5433/associations
     username: ${associations_db_user}
     password: ${associations_db_password}
   jpa:
