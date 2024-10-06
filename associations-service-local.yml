@@ -10,9 +10,7 @@ spring:
     database: postgresql
     hibernate:
       ddl-auto: create-drop
-    show-sql: true     
-    properties:
-      hibernate:
         format_sql: true
         use_sql_comments: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true     
