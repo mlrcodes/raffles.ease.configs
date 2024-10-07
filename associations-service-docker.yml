@@ -2,13 +2,11 @@ server:
   port: 8081
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://associations-mysql-db:3306/associations
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://associations-db:5433/associations
     username: ${associations_db_user}
-    password: ${associations_db_password}
+    password: ${associations_db_password} 
   jpa:
     hibernate:
-      ddl-auto: update
-      show-sql: true
-    database: mysql
-
+      ddl-auto: create
+    database: postgresql
