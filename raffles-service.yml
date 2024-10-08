@@ -1,0 +1,16 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver    
+    url: jdbc:postgresql://${host}:${port}/raffles
+    username: ${raffles_db_user}
+    password: ${raffles_db_password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+application:
+  config:
+    associations-url: http://${associations_host}:${associations_port}/api/v1/associations
