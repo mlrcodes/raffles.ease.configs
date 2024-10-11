@@ -1,1 +1,16 @@
-
+server:
+  port: 8065
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5435/orders
+    username: ${associations_db_user}
+    password: ${associations_db_password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+application:
+  config:
+    tickets-url: http://localhost:8082/api/v1/tickets
