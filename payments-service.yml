@@ -12,4 +12,4 @@ spring:
     
 application:
   config:
-    raffles-url: http://${raffles_host}:${raffles_port}/api/v1/${raffles_db}
+    raffles-url: http://${raffles_host}:${raffles_port}/api/v1/raffles
