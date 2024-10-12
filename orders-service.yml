@@ -4,8 +4,8 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://${orders_db_host}:${orders_db_port}/${orders_db}
-    username: ${associations_db_user}
-    password: ${associations_db_password}
+    username: ${orders_db_user}
+    password: ${orders_db_password}
   jpa:
     hibernate:
       ddl-auto: update
