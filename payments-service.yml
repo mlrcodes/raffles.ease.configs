@@ -1,0 +1,15 @@
+server:
+  port: 8085
+spring:
+  data:
+    mongodb:
+      username: ${payments_db_user}
+      password: ${payments_db_password}
+      host: ${payments_host}
+      port: ${payments_port}
+      database: ${payments_database}
+      authentication-database: admin
+    
+application:
+  config:
+    raffles-url: http://${raffles_host}:${raffles_port}/api/v1/${raffles_db}
