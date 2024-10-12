@@ -13,4 +13,4 @@ spring:
 
 application:
   config:
-    associations-url: http://localhost:8081/api/v1/associations
+    tickets-url: http://localhost:8082/api/v1/tickets
