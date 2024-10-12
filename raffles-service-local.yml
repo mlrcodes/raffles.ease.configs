@@ -14,3 +14,4 @@ spring:
 application:
   config:
     tickets-url: http://localhost:8082/api/v1/tickets
+    stripe-url: http://localhost:8084/api/v1/stripe
