@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver    
-    url: jdbc:postgresql://raffles-db:5432/raffles
+    url: jdbc:postgresql://${raffles_db_host}:${raffles_db_port}/${raffles_db}
     username: ${raffles_db_user}
     password: ${raffles_db_password}
   jpa:
@@ -13,4 +13,4 @@ spring:
 
 application:
   config:
-    associations-url: http://associations-service:8081/api/v1/associations
+    associations-url: http://${associations_host}:${associations_port}/api/v1/associations

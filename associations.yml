@@ -1,1 +1,13 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${associations_db_host}:${associations_db_port}/${associations_db}
+    username: ${associations_db_user}
+    password: ${associations_db_password} 
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
 

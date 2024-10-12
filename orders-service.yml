@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5435/orders
+    url: jdbc:postgresql://${orders_db_host}:${orders_db_port}/${orders_db}
     username: ${associations_db_user}
     password: ${associations_db_password}
   jpa:
@@ -13,4 +13,4 @@ spring:
     
 application:
   config:
-    tickets-url: http://localhost:8082/api/v1/tickets
+    tickets-url: http://${raffles_host}:${raffles_port}/api/v1/tickets
