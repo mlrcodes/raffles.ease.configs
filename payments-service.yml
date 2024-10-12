@@ -7,7 +7,7 @@ spring:
       password: ${payments_db_password}
       host: ${payments_host}
       port: ${payments_port}
-      database: ${payments_database}
+      database: ${payments_db}
       authentication-database: admin
     
 application:
