@@ -13,3 +13,4 @@ spring:
 application:
   config:
     raffles-url: http://${raffles_host}:${raffles_port}/api/v1/raffles
+    stripe-url: http://${payments_host}:${payments_port}/api/v1/stripe
