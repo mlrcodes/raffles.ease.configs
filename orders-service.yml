@@ -14,3 +14,4 @@ spring:
 application:
   config:
     tickets-url: http://${raffles_host}:${raffles_port}/api/v1/tickets
+    stripe-url: http://${payments_host}:${payments_port}/api/v1/stripe
