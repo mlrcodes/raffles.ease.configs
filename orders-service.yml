@@ -26,7 +26,7 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: '*'
-        spring.json.type.mapping: p_order_success:com.raffleease.orders_service.Kafka.Messages.Success.SuccessNotification, order_failure:com.miguel.raffles.com.raffleease.orders_Service.Kafka.Messages.Failure.FailureNotification
+        spring.json.type.mapping: p_order_success:com.raffleease.orders_service.Kafka.Messages.Success.SuccessNotification, order_failure:com.raffleease.orders_service.Kafka.Messages.Failure.FailureNotification
     
 application:
   config:
