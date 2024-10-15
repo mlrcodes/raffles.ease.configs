@@ -20,7 +20,7 @@ spring:
       auto-offset-reset: earliest
       properties:
         spring.json.trusted.packages: '*'
-        spring.json.type.mapping: n_order_success:com.miguel.raffleease.notification_service.Kafka.Messages.Success.SuccessNotification
+        spring.json.type.mapping: n_order_success:com.miguel.raffleease.notifications_service.Kafka.Messages.Success.SuccessNotification
 
   mail:
     host: ${mail_host}
