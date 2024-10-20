@@ -9,8 +9,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    database: mysql
-
+    database: postgresql
+    
   kafka:
     consumer:
       bootstrap-servers: ${kafka_host}:${kafka_port}
