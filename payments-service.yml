@@ -16,7 +16,7 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
-        spring.json.type.mapping: p_order_success:com.raffleease.payments_service.Kafka.Messages.SuccessNotificationRequest, order_failure:com.raffleease.payments_service.Kafka.Messages.FailureNotificationRequest
+        spring.json.type.mapping: p_order_success:com.raffleease.payments_service.Kafka.Messages.SuccessNotificationRequest,order_failure:com.raffleease.payments_service.Kafka.Messages.FailureNotificationRequest
     
 application:
   config:
