@@ -12,12 +12,6 @@ spring:
     show-sql: true
  
   kafka:
-    producer:
-      bootstrap-servers: ${kafka_host}:${kafka_port}
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      properties:
-        spring.json.type.mapping: n_order_success:com.raffleease.orders_service.Kafka.Messages.Success.SuccessNotificationRequest, release_tickets:com.raffleease.orders_service.Kafka.Messages.Tickets.TicketsReleaseRequest
     consumer:
       bootstrap-servers: ${kafka_host}:${kafka_port}
       group-id: orders-group
