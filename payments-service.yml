@@ -16,7 +16,7 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer 
       properties:
-        spring.json.type.mapping: test-topic:com.raffleease.orders_service.Kafka.Messages.MessageDTO      
+        spring.json.type.mapping: test-topic:com.raffleease.payments_service.Kafka.Messages.MessageDTO      
     
 application:      
   config:
