@@ -14,9 +14,7 @@ spring:
     producer:
       bootstrap-servers: ${kafka_host}:${kafka_port}
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      properties:
-        spring.json.type.mapping: p_order_success:com.raffleease.payments_service.Kafka.Messages.SuccessNotificationRequest, order_failure:com.raffleease.payments_service.Kafka.Messages.FailureNotificationRequest
+      value-serializer: org.springframework.kafka.support.serializer.StringSerializer
     
 application:
   config:
