@@ -14,7 +14,7 @@ spring:
     producer:
       bootstrap-servers: ${kafka_host}:${kafka_port}
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer    
-application:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializerapplication
+      
   config:
     raffles-url: http://${raffles_host}:${raffles_port}/api/v1/raffles
