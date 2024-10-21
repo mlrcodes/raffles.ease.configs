@@ -12,13 +12,6 @@ spring:
     show-sql: true
  
   kafka:
-      properties:
-        spring:
-          kafka:
-            consumer:
-              value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-              value-deserializer-class: com.raffleease.orders_service.Kafka.Messages.MessageDTO
-
     consumer:
       bootstrap-servers: ${kafka_host}:${kafka_port}
       group-id: orders-group
