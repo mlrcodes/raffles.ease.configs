@@ -16,7 +16,13 @@ spring:
       bootstrap-servers: ${kafka_host}:${kafka_port}
       group-id: orders-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          kafka:
+            consumer:
+              value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+              value-deserializer-class: com.raffleease.orders_service.Kafka.Messages.MessageDTO
 
 application:
   config:
