@@ -9,6 +9,12 @@ spring:
       port: ${payments_db_port}
       database: ${payments_db}
       authentication-database: admin
+
+  kafka:
+    producer:
+      bootstrap-servers: ${kafka_host}:${kafka_port}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer      
       
 application:      
   config:
