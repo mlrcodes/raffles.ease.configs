@@ -15,7 +15,7 @@ spring:
   kafka:
     bootstrap-servers: ${kafka_host}:${kafka_port} 
     consumer:
-      group-id: groupId 
+      group-id: orders-group 
       auto-offset-reset: earliest 
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
@@ -23,9 +23,9 @@ spring:
         spring:
           json:
             trusted: 
-              packages: com.raffleease.common-models.DTO.Kafka 
+              packages: com.raffleease.common-models.DTO.Kafka,com.raffleease.common-models.DTO.Tickets 
             type:
-              mapping: payment-success:com.raffleease.common-models.DTO.Kafka.PaymentSuccess,payment-failure:com.raffleease.common-models.DTO.Kafka.PaymentFailure    
+              mapping: payment-success:com.raffleease.common-models.DTO.Kafka.PaymentSuccess,payment-failure:com.raffleease.common-models.DTO.Kafka.PaymentFailure,tickets-release:com.raffleease.common-models.DTO.Tickets.ReservationRequest    
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
