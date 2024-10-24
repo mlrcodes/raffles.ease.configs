@@ -13,17 +13,22 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
     
+spring:
   kafka:
+    bootstrap-servers: ${kafka_host}:${kafka_port} 
     consumer:
-      bootstrap-servers: ${kafka_host}:${kafka_port}
+      group-id: notifications-group 
+      auto-offset-reset: earliest 
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      group-id: notifications-group
-      auto-offset-reset: earliest
       properties:
-        spring.json.trusted.packages: '*'
-        spring.json.type.mapping: n_order_success:com.raffleease.notifications_service.Kafka.Messages.Success.SuccessNotification
-
+        spring:
+          json:
+            trusted: 
+              packages: com.raffleease.common-models.DTO.Kafka 
+            type:
+              mapping: order-success:com.raffleease.common-models.DTO.Kafka.OrderSuccess,order-failure:com.raffleease.common-models.DTO.Kafka.OrderFailure
+      
   mail:
     host: ${mail_host}
     port: ${mail_port}
