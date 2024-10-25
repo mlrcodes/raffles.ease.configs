@@ -26,9 +26,9 @@ spring:
         spring:
           json:
             trusted: 
-              packages: com.raffleease.common-models.DTO.Tickets
+              packages: com.raffleease.common-models.DTO.Kafka
             type:
-              mapping: tickets-release:com.raffleease.common-models.DTO.Tickets.ReservationRequest
+              mapping: tickets-release:com.raffleease.common-models.DTO.Tickets.TicketsReleaseRequest
     producer:
       bootstrap-servers: ${kafka_host}:${kafka_port}
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
