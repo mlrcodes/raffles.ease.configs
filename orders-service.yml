@@ -23,9 +23,9 @@ spring:
         spring:
           json:
             trusted: 
-              packages: com.raffleease.common-models.DTO.Kafka,com.raffleease.common-models.DTO.Tickets 
+              packages: com.raffleease.common_models.DTO.Kafka 
             type:
-              mapping: payment-success:com.raffleease.common-models.DTO.Kafka.PaymentSuccess,payment-failure:com.raffleease.common-models.DTO.Kafka.PaymentFailure,tickets-release:com.raffleease.common-models.DTO.Tickets.ReservationRequest    
+              mapping: payment-success:com.raffleease.common-models.DTO.Kafka.PaymentSuccess,payment-failure:com.raffleease.common-models.DTO.Kafka.PaymentFailure    
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
