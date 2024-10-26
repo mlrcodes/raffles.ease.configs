@@ -3,7 +3,6 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://${tickets_db_host}:${tickets_db_port}/${tickets_db}
       username: ${tickets_db_user}
       password: ${tickets_db_password}
       host: ${tickets_db_host}
