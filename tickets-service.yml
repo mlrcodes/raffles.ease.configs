@@ -9,12 +9,7 @@ spring:
       port: ${tickets_db_port}
       database: ${tickets_db}
       authentication-database: admin
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
 
-spring:
   kafka:
     bootstrap-servers: ${kafka_host}:${kafka_port} 
     consumer:
