@@ -24,7 +24,7 @@ spring:
             trusted: 
               packages: com.raffleease.common_models.DTO.Kafka
             type:
-              mapping: modify-availability:com.raffleease.common_models.DTO.Kafka.ModifyTicketsAvailability
+              mapping: modify-availability:com.raffleease.common_models.DTO.Kafka.TicketsAvailabilityRequest
 
 application:
   config:
