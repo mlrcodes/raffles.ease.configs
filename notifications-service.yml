@@ -25,7 +25,7 @@ spring:
             trusted: 
               packages: com.raffleease.common-models.DTO.Kafka 
             type:
-              mapping: order-success:com.raffleease.common-models.DTO.Kafka.OrderSuccess,order-failure:com.raffleease.common-models.DTO.Kafka.OrderFailure
+              mapping: order-success:com.raffleease.common_models.DTO.Kafka.OrderSuccess,order-failure:com.raffleease.common_models.DTO.Kafka.OrderFailure
       
   mail:
     host: ${mail_host}
