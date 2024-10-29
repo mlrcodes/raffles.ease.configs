@@ -29,4 +29,4 @@ spring:
 application:
   config:
     associations-url: http://${associations_host}:${associations_port}/api/v1/associations
-    tickets-url: http://${raffles_host}:${raffles_port}/api/v1/tickets
+    tickets-url: http://${tickets_host}:${tickets_port}/api/v1/tickets
