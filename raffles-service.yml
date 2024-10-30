@@ -25,6 +25,9 @@ spring:
               packages: com.raffleease.common_models.DTO.Kafka
             type:
               mapping: modify-availability:com.raffleease.common_models.DTO.Kafka.TicketsAvailabilityRequest
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer    
 
 application:
   config:
