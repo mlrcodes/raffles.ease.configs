@@ -10,13 +10,7 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-  redis:
-    host: ${redis_host}
-    port: ${redis_port}  
-  cache:
-      type: redis
-
+    
   kafka:
     bootstrap-servers: ${kafka_host}:${kafka_port} 
     consumer:
