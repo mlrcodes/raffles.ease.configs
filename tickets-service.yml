@@ -23,7 +23,7 @@ spring:
             trusted: 
               packages: com.raffleease.common_models.DTO.Kafka
             type:
-              mapping: tickets-release:com.raffleease.common_models.DTO.Kafka.TicketsReleaseRequest,tickets-raffle:com.raffleease.common_models.DTO.Kafka.TicketsRaffleRequest
+              mapping: tickets-release:com.raffleease.common_models.DTO.Kafka.TicketsRelease,tickets-raffle:com.raffleease.common_models.DTO.Kafka.TicketsRaffle
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer    
