@@ -1,0 +1,63 @@
+server:
+  port: 8080 
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true 
+      routes:
+
+        - id: associations-service
+          uri: lb://associations-service 
+          predicates:
+            - Path=/api/v1/associations/** 
+          filters:
+            - RewritePath=/api/v1/associations/(?<remaining>.*), /api/v1/associations/${remaining}
+
+        - id: raffles-service-raffles
+          uri: lb://raffles-service  
+          predicates:
+            - Path=/api/v1/raffles/**  
+          filters:
+            - RewritePath=/api/v1/raffles/(?<remaining>.*), /api/v1/raffles/${remaining}
+
+        - id: raffles-service-s3
+          uri: lb://raffles-service 
+          predicates:
+            - Path=/api/v1/s3/** 
+          filters:
+            - RewritePath=/api/v1/s3/(?<remaining>.*), /api/v1/s3/${remaining}
+
+        - id: tickets-service
+          uri: lb://tickets-service 
+          predicates:
+            - Path=/api/v1/tickets/** 
+          filters:
+            - RewritePath=/api/v1/tickets/(?<remaining>.*), /api/v1/tickets/${remaining}
+
+        - id: payments-service
+          uri: lb://payments-service 
+          predicates:
+            - Path=/api/v1/payments/** 
+          filters:
+            - RewritePath=/api/v1/payments/(?<remaining>.*), /api/v1/payments/${remaining}
+
+        - id: orders-service
+          uri: lb://orders-service 
+          predicates:
+            - Path=/api/v1/orders/** 
+          filters:
+            - RewritePath=/api/v1/orders/(?<remaining>.*), /api/v1/orders/${remaining}
+
+        - id: notifications-service
+          uri: lb://notifications-service 
+          predicates:
+            - Path=/api/v1/notifications/** 
+          filters:
+            - RewritePath=/api/v1/notifications/(?<remaining>.*), /api/v1/notifications/${remaining}
+
+
