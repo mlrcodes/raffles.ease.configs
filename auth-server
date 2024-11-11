@@ -1,0 +1,20 @@
+server:
+  port: 8087
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${auth_db_host}:${auth_db_port}/${auth_db}
+    username: ${auth_db_user}
+    password: ${auth_db_password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true     
+
+application:
+  config:
+    associations-url: http://${gateway_host}:${gateway_port}/api/v1/associations
+  security:
+    jwt:
+      secret-key: 586E3272357538782F413F4428472B4B6250655368566B597033733676397924
+      expiration: 864000000
