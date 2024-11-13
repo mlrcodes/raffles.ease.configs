@@ -63,4 +63,4 @@ spring:
 
 application:
   config:
-    auth-url: http://${gateway_host}:${gateway_port}/api/v1/auth
+    auth-url: http://${auth_host}:${auth_port}/api/v1/auth
