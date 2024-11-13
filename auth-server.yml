@@ -9,7 +9,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true     
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true 
 
 application:
   security:
