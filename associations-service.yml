@@ -11,3 +11,17 @@ spring:
       ddl-auto: create
     database: postgresql
 
+  kafka:
+    bootstrap-servers: ${kafka_host}:${kafka_port} 
+    consumer:
+      group-id: associations-group 
+      auto-offset-reset: earliest 
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted: 
+              packages: com.raffleease.common_models.DTO.Kafka
+            type:
+              mapping: modify-availability:com.raffleease.common_models.DTO.Kafka.AssociationCreate
