@@ -19,4 +19,4 @@ application:
       expiration: ${expiration}
 
   config:
-    associations-url: http://${associations_host}:${associations_port}/api/v1/associations
+    associations-url: http://${gateway_host}:${gateway_port}/api/v1/associations
