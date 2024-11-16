@@ -17,3 +17,6 @@ application:
     jwt:
       secret-key: ${security_key}
       expiration: ${expiration}
+
+  config:
+    associations-url: http://${associations_host}:${associations_port}/api/v1/associations
