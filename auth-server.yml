@@ -12,11 +12,16 @@ spring:
       dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true 
 
+  kafka:
+    bootstrap-servers: ${kafka_host}:${kafka_port} 
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer    
+
 application:
   security:
     jwt:
       secret-key: ${security_key}
       expiration: ${expiration}
-
   config:
     associations-url: http://${gateway_host}:${gateway_port}/api/v1/associations
