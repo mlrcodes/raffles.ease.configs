@@ -13,10 +13,15 @@ spring:
         add-to-simple-url-handler-mapping: true
         cors-configurations:
           '[/**]':
-            allowedOrigins: "*"
-            allowedHeaders: "*"
-            allowedMethods: GET, POST, PUT, DELETE, OPTIONS
-            
+            allowedOrigins: "http://localhost:4200" # Cambia al dominio de tu frontend
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*"            
       routes:
         - id: associations-service
           uri: lb://associations-service 
