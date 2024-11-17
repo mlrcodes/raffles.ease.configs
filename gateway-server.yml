@@ -16,7 +16,6 @@ spring:
             allowedOrigins: "*"
             allowedHeaders: "*"
             allowedMethods: GET, POST, PUT, DELETE, OPTIONS
-            allowCredentials: true
             
       routes:
         - id: associations-service
