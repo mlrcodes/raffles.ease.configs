@@ -8,15 +8,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true     
-      globalcors:
-        add-to-simple-url-handler-mapping: true
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: "http://localhost:4200" # Cambia al dominio de tu frontend
-            allowedMethods: "*"
-            allowedHeaders: "*"
-            
+          enabled: true                 
       routes:
         - id: associations-service
           uri: lb://associations-service 
