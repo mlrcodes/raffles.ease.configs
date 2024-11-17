@@ -6,11 +6,27 @@ spring:
     name: api-gateway
   cloud:
     gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders:
+              - "Origin"
+              - "Content-Type"
+              - "Accept"
+              - "Authorization"
+              - "Referer"
+            allowedMethods:
+              - POST
+              - GET
+              - OPTIONS
+              - PUT
+              - DELETE
       discovery:
         locator:
           enabled: true 
       routes:
-
         - id: associations-service
           uri: lb://associations-service 
           predicates:
