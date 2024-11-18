@@ -11,13 +11,7 @@ spring:
       ddl-auto: update
       dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true 
-
-  kafka:
-    bootstrap-servers: ${kafka_host}:${kafka_port} 
-    producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer    
-
+    
 application:
   security:
     jwt:
