@@ -31,5 +31,6 @@ spring:
 
 application:
   config:
-    associations-url: http://${gateway_host}:${gateway_port}/api/v1/associations
-    tickets-url: http://${gateway_host}:${gateway_port}/api/v1/tickets
+    associations-url: http://${associations_host}:${associations_port}/api/v1/associations
+    tickets-url: http://${tickets_host}:${tickets_port}/api/v1/tickets
+    auth-url: http://${auth_host}:${auth_port}/api/v1/tickets
