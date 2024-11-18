@@ -23,7 +23,6 @@ spring:
             - Path=/api/v1/raffles/**  
           filters:
            - AuthenticationFilter
-           - AddRequestHeader=Authorization, $\\{Authorization}
            
         - id: raffles-service-s3
           uri: lb://raffles-service 
