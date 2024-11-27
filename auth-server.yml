@@ -1,9 +1,5 @@
 server:
   port: 8087
-eureka:
-  client:
-    service-url:
-      defaultZone: http://${eureka_host}:${eureka_port}/eureka
       
 spring:
   datasource:
