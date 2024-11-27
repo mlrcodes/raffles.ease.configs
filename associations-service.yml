@@ -1,5 +1,11 @@
 server:
   port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka_host}:${eureka_port}/eureka
+  
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
