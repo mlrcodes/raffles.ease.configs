@@ -1,5 +1,11 @@
 server:
   port: 8086
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka_host}:${eureka_port}/eureka
+  
 spring:
   data:
     mongodb:
