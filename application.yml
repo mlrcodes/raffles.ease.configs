@@ -1,4 +1,4 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://${kafka_host}:${kafka_port}/eureka
+      defaultZone: http://${eureka_host}:${eureka_port}/eureka
