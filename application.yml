@@ -2,5 +2,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://${discovery_host}:${discovery_port}/eureka
-    prefer-ip-address: true          
-    ip-address: ${ECS_CONTAINER_IP} 
+  instance:
+    prefer-ip-address: true
+    ip-address: ${ECS_CONTAINER_METADATA_IPV4}
