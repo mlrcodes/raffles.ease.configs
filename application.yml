@@ -5,6 +5,5 @@ eureka:
   instance:
     prefer-ip-address: true 
     ip-address: ${ECS_CONTAINER_METADATA_URI_V4} 
-    hostname: ${ECS_CONTAINER_METADATA_URI_V4}
     non-secure-port: 8081
     instance-id: ${spring.application.name}
