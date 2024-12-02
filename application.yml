@@ -2,6 +2,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://${eureka_host}:${eureka_port}/eureka}
-#  instance:
-#    ip-address: ${ECS_PRIVATE_IP}
-#    prefer-ip-address: true
