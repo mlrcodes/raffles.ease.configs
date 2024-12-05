@@ -1,6 +1,6 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://${eureka_host}:${eureka_port}/eureka
+      defaultZone: http://${discovery_host}:${discovery_port}/eureka
   instance:
     ip-address: ${ECS_PRIVATE_IP}
